@@ -2769,8 +2769,7 @@
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "Release" (
   copy /y "\\Kaco1.Kahler.local\data\FDS\PC Code\TerminalManagement2\Updates\Release\WyUpdate\*.*" $(ProjectDir)
-)
-"\\Kaco1.Kahler.local\data\FDS\PC Code\Code Signing\Code Signing Utility\Current\KahlerCodeSigning.exe" "$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)"</PostBuildEvent>
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

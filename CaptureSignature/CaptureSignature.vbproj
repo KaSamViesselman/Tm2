@@ -74,12 +74,11 @@
   <ItemGroup>
     <Reference Include="AxInterop.SIGPLUSLib, Version=2.24.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\Sigplus\SigPlusActiveX\4.4.0.28\AxInterop.SIGPLUSLib.dll</HintPath>
+      <HintPath>.\AxInterop.SIGPLUSLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.SIGPLUSLib, Version=2.24.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Interop.SIGPLUSLib">
+      <HintPath>.\Interop.SIGPLUSLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\Sigplus\SigPlusActiveX\4.4.0.28\Interop.SIGPLUSLib.dll</HintPath>
     </Reference>
     <Reference Include="KaCommonObjects, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\KaCommonObjects.1.19.1\lib\net20\KaCommonObjects.dll</HintPath>
@@ -90,7 +89,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="SigPlusNET">
-      <HintPath>\\kaco1.kahler.local\data\FDS\PC Code\Sigplus\2.0.0.40\SigPlusNET.dll</HintPath>
+      <HintPath>.\SigPlusNET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

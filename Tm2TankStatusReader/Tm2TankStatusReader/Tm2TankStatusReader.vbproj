@@ -73,9 +73,9 @@
       <HintPath>..\..\packages\KaLicenseActivation.1.19.2\lib\net40\KaLicenseActivation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="KaModbusTcp, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KaModbusTcp, Version=4.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\kaco1\data\FDS\PC Code\KaModbusTcp\Code\KaModbusTcp_4.0.4\KaModbusTcp.dll</HintPath>
+      <HintPath>.\KaModbusTcp.dll</HintPath>
     </Reference>
     <Reference Include="KaTm2Database, Version=1.19.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\KaTm2Database.1.19.11\lib\net40\KaTm2Database.dll</HintPath>
