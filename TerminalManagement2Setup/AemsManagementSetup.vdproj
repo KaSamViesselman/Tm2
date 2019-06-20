@@ -578,7 +578,7 @@
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:\"$(ProjectDir)\\fix_removepreviousversion.vbs\" \"$(BuiltOuputPath)\"\r\n\"\\\\Kaco1.Kahler.local\\data\\FDS\\PC Code\\Code Signing\\Code Signing Utility\\Current\\KahlerCodeSigning.exe\" \"$(BuiltOuputPath)\""
+        "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"
