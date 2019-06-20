@@ -69,7 +69,7 @@
     </Reference>
     <Reference Include="AuthorizationWebControl, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\KahlerLicensing\1.19.2\Web Control\AuthorizationWebControl.dll</HintPath>
+      <HintPath>.\AuthorizationWebControl.dll</HintPath>
     </Reference>
     <Reference Include="AutomaticUpdater, Version=2.6.18.4, Culture=neutral, PublicKeyToken=437887616030daaf, processorArchitecture=MSIL">
       <HintPath>..\packages\AutomaticUpdater.2.6.18.4\lib\net40\AutomaticUpdater.dll</HintPath>
@@ -77,7 +77,7 @@
     </Reference>
     <Reference Include="CommonWebControls, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\KahlerLicensing\1.19.2\Web Control\CommonWebControls.dll</HintPath>
+      <HintPath>.\CommonWebControls.dll</HintPath>
     </Reference>
     <Reference Include="KaCommonControls, Version=1.19.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\KaCommonControls.1.19.0\lib\net40\KaCommonControls.dll</HintPath>
