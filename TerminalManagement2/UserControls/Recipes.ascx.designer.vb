@@ -14,13 +14,22 @@ Option Explicit On
 Partial Public Class Recipes
     
     '''<summary>
-    '''rpFacilities control.
+    '''btnAddRemove control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rpFacilities As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents btnAddRemove As Global.System.Web.UI.WebControls.LinkButton
+    
+    '''<summary>
+    '''rpBulkProducts control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rpBulkProducts As Global.System.Web.UI.WebControls.Repeater
     
     '''<summary>
     '''ddlBulkProduct control.
