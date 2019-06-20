@@ -1,0 +1,21 @@
+#main #aspnetForm{
+	width: 100%;
+	clear: both;
+}
+
+.navigation {
+    position: absolute;
+    width: 15em;
+}
+
+#showNavigation {
+    display: inline-block;
+}
+
+#hideNavigation {
+    display: inline-block;
+}
+
+.navigationHidden {
+    display: none;
+}

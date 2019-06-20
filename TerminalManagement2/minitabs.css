@@ -1,0 +1,23 @@
+﻿ul#minitabs
+{list-style: none; margin: 0; padding: 10px 0;
+	border-bottom: 1px solid #FFF;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap}
+	
+ul#minitabs li
+{display: inline;
+	margin: 0 15px}
+	
+ul#minitabs a
+{text-decoration: none; padding: 0 0 3px;
+	border-bottom: 4px solid #FFF;
+	color: 	#5C5858}
+	
+ul#minitabs a#current
+{border-color: orange;
+	color: #003399}
+	
+ul#minitabs a:hover
+{border-color: orange;
+	color: #99ccff}

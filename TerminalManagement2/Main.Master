@@ -1,0 +1,54 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Main.master.vb" Inherits="KahlerAutomation.TerminalManagement2.Main" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title><%: Page.Title %></title>
+    <link rel="shortcut icon" href="FavIcon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link rel="stylesheet" href="Styles/site.css" />
+    <link rel="stylesheet" href="Content/font-awesome.css" />
+    <asp:ContentPlaceHolder ID="ContentHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="header">
+        <a href="Welcome.aspx">
+            <img src="images/Kahler-logo-standard.png" alt="Kahler Automation" class="logo" />
+        </a>
+        <span class="applicationTitle">Terminal Management 2</span>
+    </div>
+    <div class="navigation navigationHidden">
+        <asp:Repeater runat="server" ID="rpNavigationLinks">
+            <ItemTemplate>
+                <a href="<%# DataBinder.Eval(Container.DataItem, "Url")%>"><%# DataBinder.Eval(Container.DataItem, "Name")%></a>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+    <form id="main" runat="server" name="main">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Site Scripts--%>
+                <asp:ScriptReference Path="~/scripts/jquery-3.4.1.min.js" />
+                <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
+                <asp:ScriptReference Path="~/scripts/soap-1.0.1.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div>
+            <div class="titleBar row justify-content-end align-items-center p-1 m-0">
+                <h1 class="col pl-0">Welcome</h1>
+                <div class="col p-0 text-right">
+                    <input id="phSearchInput" type="text" autocomplete="off" maxlength="100" name="str" placeholder="Search..." size="20" title="Search..." value="" style="font-size: 13.333px" class="phSearchInput" onkeydown="pageHeaderSearchTextEnterKeyDown()" />
+                    <input id="phSearchButton" type="button" value="Search" style="font-size: 13.333px" class="phSearchButton" onclick="pageHeaderSearchButtonClick()" />
+                    <asp:LinkButton runat="server" ID="notification" ClientIDMode="Static" CssClass="notification" Visible="false" Text="!" OnClick="notification_Click"></asp:LinkButton>
+                </div>
+            </div>
+            <div class="container mt-2">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

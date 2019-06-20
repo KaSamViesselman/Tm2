@@ -1,0 +1,35 @@
+.header {
+    display: none;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.sectionEven, .sectionOdd {
+	clear: both;
+	width: 100%;
+}
+
+.section label, .sectionEven label, .sectionOdd label {
+	display: block;
+	text-align: left;
+}
+
+.section input, .section select, .sectionEven input, .sectionEven select, .sectionOdd input, .sectionOdd select, .section .input, .sectionEven .input, .sectionOdd .input, .section textarea, .sectionEven textarea, .sectionOdd textarea {
+	width: 100%;
+}
+
+.section label[for], .sectionEven label[for], .sectionOdd label[for] {
+	display: inline;
+}
+
+.recordSelection label {
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+.recordSelection select {
+    width: 100%;
+}

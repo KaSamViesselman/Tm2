@@ -1,0 +1,194 @@
+/*This is a sample file.  To use this, rename it as TicketCustom.css
+You can directly reference objects by using the #ObjectName
+Or, you can reference the class by using the .ClassName
+*/
+A:link {
+    color: #0000FF;
+}
+
+A:visited {
+    color: #000080;
+}
+
+A:hover {
+    color: red;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 14pt;
+}
+
+h1 {
+    color: #000000;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 12pt;
+}
+
+h2 {
+    color: #000000;
+}
+
+big {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+big {
+    font-size: 12pt;
+}
+
+big {
+    color: #000000;
+}
+
+small {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+small {
+    font-size: 8pt;
+}
+
+small {
+    color: #000000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 10pt;
+}
+
+body {
+    color: #000000;
+    height: 20px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 10pt;
+}
+
+p {
+    color: #000000;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+    font-size: 10pt;
+}
+
+td {
+    color: #000000;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+    font-size: 7pt;
+}
+
+th {
+    color: #003399;
+}
+
+th {
+    border-color: #99ccff;
+}
+
+select, input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+/*Modal Popup*/
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup {
+    background-color: #ffffff;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#litComments {
+    font-size: 20pt;
+}
+
+#FertilizerGrade {
+    font-size: 30pt;
+    color: red;
+}
+
+.FertilizerGuaranteedAnalysis {
+    font-size: 40pt;
+}
+
+.DerivedFromLabel {
+    font-size: 10pt;
+}
+
+.DerivedFrom {
+    font-size: 10pt;
+}
+
+.nutrientAmountWarning {
+    font-size: 10pt;
+}
+
+.Transports {
+    font-size: 4pt;
+}
+
+#CompartmentDetails {
+    font-size: 6pt;
+}
+
+#rowDisclaimer {
+    font-size: 16pt;
+}
+
+.CompartmentHeader {
+    color: yellow;
+}
+
+.CompartmentDetail {
+    color: green;
+}
+
+.CompartmentTotal {
+    color: orange;
+}
+
+.TransportsWeights {
+    color: blue;
+}

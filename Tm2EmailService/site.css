@@ -1,0 +1,444 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'kacoregular';
+    src: url('kaco-webfont.eot');
+    src: url('kaco-webfont.eot?#iefix') format('embedded-opentype'), url('kaco-webfont.woff2') format('woff2'), url('kaco-webfont.woff') format('woff'), url('kaco-webfont.ttf') format('truetype'), url('kaco-webfont.svg#kacoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+h1 {
+    font-size: 12pt;
+}
+
+.not {
+    display: none;
+}
+
+.header {
+    clear: both;
+    width: 100%;
+}
+
+.logo {
+    margin: 6px;
+}
+
+.applicationTitle {
+    margin: 6px;
+    text-align: right;
+    font-weight: bold;
+    line-height: 45px;
+    float: right;
+}
+
+.navigation {
+    float: left;
+    width: 15%;
+    background-color: rgb(0, 51, 151);
+    z-index: 100;
+}
+
+.navigation a {
+    display: block;
+    padding: 3px;
+    margin: 3px;
+    background-color: #99ccff;
+    color: rgb(0, 51, 151);
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: white;
+    color: black;
+}
+
+.navigation .selected {
+    background-color: white;
+    color: black;
+}
+
+#hideNavigation {
+    display: none;
+}
+
+#main {
+    float: right;
+    width: 85%;
+}
+
+.titleBar {
+    background-color: rgb(0, 51, 151);
+    color: White;
+    padding: 6px;
+    font-size: 14pt;
+    font-weight: bold;
+    min-height: 1.5em;
+}
+
+.titleBar a {
+    display: none;
+}
+
+.titleBar h1 {
+    display: inline;
+}
+
+/*.tabs {
+	background-color: rgb(64, 64, 64);
+}
+
+.tabs a {
+	display: inline-block;
+	padding: 6px;
+	margin: 2px 0px 0px 2px;
+	background-color: rgb(100, 100, 100);
+	color: White;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.tabs a:hover {
+    background-color: rgb(120, 120, 120);
+}
+
+.tabs .selected {
+	background-color: White;
+	color: Black;
+}*/
+
+/* classic tabs */
+
+.tabs a {
+    display: inline-block;
+    padding: 6px;
+    margin: 6px 0px 0px 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #585858;
+    text-decoration: none;
+}
+
+.tabs a:hover {
+    border-bottom: 4px solid orange;
+    color: #99ccff;
+}
+
+.tabs .selected {
+    color: #003399;
+    border-bottom: 4px solid orange;
+}
+
+/* end classic tabs */
+
+.recordSelection, .recordSelectionEvenOdd, .section, .sectionEven, .sectionOdd, .recordControl {
+    padding: 6px;
+}
+
+.recordSelection, .recordSelectionEvenOdd, .section, .recordControl {
+    clear: both;
+    width: 100%;
+}
+
+.recordSelection, .recordSelectionEvenOdd {
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.sectionEven, .sectionOdd {
+    width: 50%;
+}
+
+.sectionEven {
+    float: left;
+}
+
+.sectionOdd {
+    float: right;
+}
+
+.section h1, .sectionEven h1, .sectionOdd h1 {
+    font-size: 10pt;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.section li, .sectionEven li, .sectionOdd li {
+    display: block;
+    width: 100%;
+}
+
+.section h2, .sectionEven h2, .sectionOdd h2 {
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+p {
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.section label, .sectionEven label, .sectionOdd label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    vertical-align: top;
+    margin: 3px;
+}
+
+.recordSelection label {
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+}
+
+.recordSelectionEvenOdd label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+.recordSelection label[for], .recordSelectionEvenOdd label[for] {
+    width: auto;
+    max-width: 50%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.recordSelection select {
+    width: 30%;
+}
+
+.recordSelectionEvenOdd select {
+    width: 60%;
+}
+
+.section label[for], .sectionEven label[for], .sectionOdd label[for] {
+    width: auto;
+    max-width: 50%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.section input, .section select, .sectionEven input, .sectionEven select, .sectionOdd input, .sectionOdd select, .section .input, .sectionEven .input, .sectionOdd .input, .section textarea, .sectionEven textarea, .sectionOdd textarea, .section inputNumeric, .sectionEven inputNumeric, .sectionEven inputNumeric, .section .inputNumeric, .sectionEven .inputNumeric, .sectionEven .inputNumeric {
+    width: 60%;
+    margin: 3px;
+}
+
+.section .input, .sectionEven .input, .sectionOdd .input, .section inputNumeric, .sectionEven inputNumeric, .sectionEven inputNumeric, .section .inputNumeric, .sectionEven .inputNumeric, .sectionEven .inputNumeric {
+    display: inline-block;
+}
+
+.section input[type=checkbox], .sectionEven input[type=checkbox], .sectionOdd input[type=checkbox], .recordSelection input[type=checkbox] {
+    text-align: left;
+    width: auto;
+}
+
+.section input[type=radio], .sectionEven input[type=radio], .sectionOdd input[type=radio] {
+    text-align: left;
+    width: auto;
+}
+
+table {
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    padding: 5px;
+    background-color: White;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid rgb(200, 200, 200);
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
+td {
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-collapse: collapse;
+}
+
+.button, .navigation .button, .navigation .button:hover, .panelExpansionButton, .panelExpansionButton:hover {
+    display: inline-block;
+    font-family: 'kacoregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14pt;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    background-color: rgb(0, 51, 151);
+    color: White;
+}
+
+.button:hover, .navigation .button:hover, .navigation .button:hover, .panelExpansionButton:hover {
+    background-color: rgb(51, 151, 255);
+}
+
+#phSearchInput {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#phSearchButton {
+    vertical-align: middle;
+    margin-right: 1em;
+    margin-left: 0.1em;
+    border: none;
+    border-radius: 2em;
+    background-color: White;
+    color:rgb(0, 51, 151);
+}
+
+#help {
+    display: inline-block;
+    float: right;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: White;
+    color: rgb(0, 51, 151);
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.addRemoveSection .addRemoveList {
+    float: left;
+    width: 75%;
+}
+
+.addRemoveSection li {
+    vertical-align: middle;
+}
+
+.addRemoveSection .addRemoveButton {
+    float: right;
+    width: 20%;
+}
+
+.recordControl {
+    z-index: 99;
+    top: 0;
+    background-color: #eeeeee;
+}
+
+.recordControl input {
+    width: auto;
+    min-width: 100px;
+}
+
+.sectionRequiredField {
+    float: right;
+    padding: 6px;
+}
+
+.required {
+    white-space: nowrap;
+}
+
+.required::after {
+    content: '*';
+    color: Red;
+    white-space: nowrap;
+}
+.section inputNumeric, .sectionEven inputNumeric, .sectionEven inputNumeric, .input .inputNumeric, .input .inputNumeric, .input .inputNumeric {
+    text-align: right;
+}
+
+.recordInterfaceButton {
+    width: 45% !important;
+}
+
+.panelExpansionButton {
+    width: 30px !important;
+    float: right !important;
+    display: block;
+    padding: 3px;
+    margin: 3px;
+    background-color: rgb(0, 51, 151);
+    color: White;
+    text-align: center;
+    text-decoration: none;
+}
+
+.arrowUpImageButton, .arrowDownImageButton, .arrowLeftImageButton, .arrowRightImageButton {
+    display: block;
+    width: 25px !important;
+    height: 25px !important;
+    border-width: 0px;
+    background-position: center;
+}
+.arrowUpImageButton, .arrowDownImageButton {
+    display: inline-block;
+}
+
+.arrowLeftImageButton, .arrowRightImageButton {
+    display: block;
+}
+/*.arrowUpImageButton {
+    background: url('/images/arrow-up-2.png') no-repeat;
+}
+
+.arrowDownImageButton {
+    background: url('/images/arrow-down-2.png') no-repeat;
+}
+
+.arrowLeftImageButton {
+    background: url('/images/arrow-left-2.png') no-repeat;
+}
+
+.arrowRightImageButton {
+    background: url('/images/arrow-right-2.png') no-repeat;
+}*/

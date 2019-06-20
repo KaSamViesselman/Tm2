@@ -1,0 +1,156 @@
+﻿A:link {
+    color: #0000FF;
+}
+
+A:visited {
+    color: #000080;
+}
+
+A:hover {
+    color: red;
+}
+
+h1 {
+    font-family: arial;
+    font-size: 14pt;
+    color: #000000;
+}
+
+h2 {
+    font-family: arial;
+    font-size: 12pt;
+    color: #000000;
+}
+
+big {
+    font-family: arial;
+    font-size: 12pt;
+    color: #000000;
+}
+
+small {
+    font-family: arial;
+    font-size: 8pt;
+    color: #000000;
+}
+
+body {
+    font-family: arial;
+    font-size: 10pt;
+    color: #000000;
+    height: 20px;
+    list-style-position: inside;
+}
+
+p {
+    font-family: arial;
+    font-size: 10pt;
+    color: #000000;
+    text-indent: -2.0em;
+    padding-left: 2.0em;
+}
+
+td {
+    font-family: arial;
+    font-size: 10pt;
+    color: #000000;
+    padding: 10px;
+    vertical-align: top;
+    margin: 0px;
+    text-indent: -1.0em;
+    padding-left: 2.0em;
+}
+
+tr {
+    vertical-align: top;
+    margin: 0px;
+}
+
+table {
+    border: 0px;
+    width: 100%;
+    margin: 0px;
+}
+
+.helpLink {
+    font-size: large;
+    font-weight: bold;
+}
+
+.indented {
+    margin-left: 20px;
+}
+
+.note {
+    font-style: italic;
+}
+
+.indentedNote {
+    margin-left: 20px;
+    font-style: italic;
+}
+
+td .indented, td .note, td .indentedNote {
+    text-indent: 0em;
+    margin-left: 0em;
+    padding-left: 2em;
+}
+
+.helpItem {
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'kacoregular';
+    src: url('styles/kaco-webfont.eot');
+    src: url('styles/kaco-webfont.eot?#iefix') format('embedded-opentype'), url('styles/kaco-webfont.woff2') format('woff2'), url('styles/kaco-webfont.woff') format('woff'), url('styles/kaco-webfont.ttf') format('truetype'), url('styles/kaco-webfont.svg#kacoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.floating {
+    z-index: 100;
+    position: fixed;
+    font-family: 'kacoregular';
+    bottom: 2%;
+    right: 2%;
+}
+
+.button {
+    display: inline-block;
+    font-family: 'kacoregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14pt;
+    text-decoration: none !important;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px;
+    background-color: rgb(0, 51, 151);
+    color: White !important;
+}
+
+    .button:hover:enabled {
+        background-color: rgb(51, 151, 255);
+    }
+
+hr {
+    width: 100%;
+    color: #003399;
+}
+
+.HelpSubjects {
+    font-size: large;
+    font-weight: bold;
+}
+
+.IndexSection {
+    font-size: large;
+    font-weight: normal;
+}
+
+.IndexItem {
+    font-size: medium;
+    font-weight: normal;
+}

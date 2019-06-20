@@ -1,0 +1,2782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2A55A86A-875A-44EA-B7EB-41077E11D639}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KahlerAutomation.TerminalManagement2</RootNamespace>
+    <AssemblyName>TerminalManagement2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TerminalManagement2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TerminalManagement2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AuthorizationWebControl, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\KahlerLicensing\1.19.2\Web Control\AuthorizationWebControl.dll</HintPath>
+    </Reference>
+    <Reference Include="AutomaticUpdater, Version=2.6.18.4, Culture=neutral, PublicKeyToken=437887616030daaf, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutomaticUpdater.2.6.18.4\lib\net40\AutomaticUpdater.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CommonWebControls, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\Kaco1.Kahler.local\data\FDS\PC Code\KahlerLicensing\1.19.2\Web Control\CommonWebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="KaCommonControls, Version=1.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaCommonControls.1.19.0\lib\net40\KaCommonControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaCommonObjects, Version=1.19.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaCommonObjects.1.19.1\lib\net20\KaCommonObjects.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaController, Version=1.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaController.1.19.0\lib\net20\KaController.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaLicenseActivation, Version=1.19.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaLicenseActivation.1.19.2\lib\net40\KaLicenseActivation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaModbus, Version=4.17.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaModbus.4.17.28\lib\net20\KaModbus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaTm2Database, Version=1.19.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaTm2Database.1.19.11\lib\net40\KaTm2Database.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaTm2LicenseActivation, Version=1.19.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaTm2LicenseActivation.1.19.2\lib\net40\KaTm2LicenseActivation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaTm2LoadFramework, Version=1.19.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaTm2LoadFramework.1.19.10\lib\net40\KaTm2LoadFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaUpdate, Version=1.19.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KaUpdate.1.19.2\lib\net40\KaUpdate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>..\packages\TaskScheduler.2.3.0\lib\4\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless, Version=4.0.0.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stateless.4.2.1\lib\net45\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Configuration" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AboutHelp.aspx" />
+    <Content Include="AccountCoupling.aspx" />
+    <Content Include="AccountCouplingHelp.aspx" />
+    <Content Include="AccountCouplingSettings.aspx" />
+    <Content Include="AccountCouplingSettingsHelp.aspx" />
+    <Content Include="AccountDestinationsHelp.aspx" />
+    <Content Include="Accounts.aspx" />
+    <Content Include="AssignmentsHelp.aspx" />
+    <Content Include="AccountsHelp.aspx" />
+    <Content Include="AdvancedSearch.aspx" />
+    <Content Include="AdvancedSearchHelp.aspx" />
+    <Content Include="AllCarriers.aspx" />
+    <Content Include="AllCarriersHelp.aspx" />
+    <Content Include="AllCarriersView.aspx" />
+    <Content Include="AllContainerEquipment.aspx" />
+    <Content Include="AllContainerEquipmentHelp.aspx" />
+    <Content Include="AllContainerEquipmentView.aspx" />
+    <Content Include="AllContainers.aspx" />
+    <Content Include="AllContainersHelp.aspx" />
+    <Content Include="AllContainersView.aspx" />
+    <Content Include="AllDrivers.aspx" />
+    <Content Include="AllDriversHelp.aspx" />
+    <Content Include="AllDriversView.aspx" />
+    <Content Include="AllTransports.aspx" />
+    <Content Include="AllTransportsHelp.aspx" />
+    <Content Include="AllTransportsView.aspx" />
+    <Content Include="AnalysisSettings.aspx" />
+    <Content Include="AnalysisSettingsHelp.aspx" />
+    <Content Include="ApplicationUsage.aspx" />
+    <Content Include="Applicators.aspx" />
+    <Content Include="ApplicatorsHelp.aspx" />
+    <Content Include="ArchiveReceivingPurchaseOrders.aspx" />
+    <Content Include="ArchiveReceivingPurchaseOrdersHelp.aspx" />
+    <Content Include="ArchiveReceivingPurchaseOrderTickets.aspx" />
+    <Content Include="ArchiveReceivingPurchaseOrderTicketsHelp.aspx" />
+    <Content Include="Assignments.aspx" />
+    <Content Include="AuditTableChanges.aspx" />
+    <Content Include="AuditTableChangesHelp.aspx" />
+    <Content Include="AuditTableChangesReport.asmx" />
+    <Content Include="AuditTableFields.aspx" />
+    <Content Include="AuditTableFieldsHelp.aspx" />
+    <Content Include="BaysHelp.aspx" />
+    <Content Include="BranchesHelp.aspx" />
+    <Content Include="BulkProductAllocation.aspx" />
+    <Content Include="BulkProductAllocationHelp.aspx" />
+    <Content Include="BulkProductAllocationView.aspx" />
+    <Content Include="BulkProductAnalysisHelp.aspx" />
+    <Content Include="ContainerInventory.aspx" />
+    <Content Include="ContainerInventoryHelp.aspx" />
+    <Content Include="ContainerInventoryPFV.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="CustomAnalysisTemplate.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="ProductSetup.aspx" />
+    <Content Include="DefaultContainerLabel.aspx" />
+    <Content Include="DefaultContainerLabelSettings.aspx" />
+    <Content Include="DefaultContainerLabelSettingsHelp.aspx" />
+    <Content Include="DefaultHazmatAnalysis.aspx" />
+    <Content Include="DefaultReceivingWebPickTicketSettings.aspx" />
+    <Content Include="DefaultReceivingWebPickTicketSettingsHelp.aspx" />
+    <Content Include="DeleteReceivingPurchaseOrders.aspx" />
+    <Content Include="DeleteReceivingPurchaseOrdersHelp.aspx" />
+    <Content Include="images\icons8-eye-512.png" />
+    <Content Include="images\icons8-password-16.png" />
+    <Content Include="images\Kahler-logo-standard.png" />
+    <Content Include="InterfaceReceivingTicketStatus.aspx" />
+    <Content Include="InterfaceReceivingTicketStatusHelp.aspx" />
+    <Content Include="InterfaceReceivingTicketStatusView.aspx" />
+    <Content Include="InterfaceTicketStatusView.aspx" />
+    <Content Include="Lots.aspx" />
+    <Content Include="LotsHelp.aspx" />
+    <Content Include="Notifications.aspx" />
+    <Content Include="PanelBulkProductFillLimits.aspx" />
+    <Content Include="PanelBulkProductFillLimitsHelp.aspx" />
+    <Content Include="PanelBulkProductSettings.aspx" />
+    <Content Include="BulkProducts.aspx" />
+    <Content Include="BulkProductsHelp.aspx" />
+    <Content Include="Carriers.aspx" />
+    <Content Include="CarriersHelp.aspx" />
+    <Content Include="ContainerEquipmentHelp.aspx" />
+    <Content Include="ContainerEquipmentTypesHelp.aspx" />
+    <Content Include="ContainerSettings.aspx" />
+    <Content Include="ContainerSettingsHelp.aspx" />
+    <Content Include="ContainersHelp.aspx" />
+    <Content Include="ContainerTypes.aspx" />
+    <Content Include="ContainerTypesHelp.aspx" />
+    <Content Include="ApplicationUsageHelp.aspx" />
+    <Content Include="ApplicationUsageView.aspx" />
+    <Content Include="ArchiveTickets.aspx" />
+    <Content Include="ArchiveOrders.aspx" />
+    <Content Include="ArchiveOrdersHelp.aspx" />
+    <Content Include="ArchiveTicketsHelp.aspx" />
+    <Content Include="CustomLoadQuestions.aspx" />
+    <Content Include="CustomLoadQuestionsHelp.aspx" />
+    <Content Include="DefaultDeliveryWebTicketSettings.aspx" />
+    <Content Include="DefaultDeliveryWebTicketSettingsHelp.aspx" />
+    <Content Include="DefaultOrderSummarySettings.aspx" />
+    <Content Include="DefaultOrderSummarySettingsHelp.aspx" />
+    <Content Include="DefaultReceivingWebTicketSettings.aspx" />
+    <Content Include="DefaultReceivingWebTicketSettingsHelp.aspx" />
+    <Content Include="EmailSettings.aspx" />
+    <Content Include="EmailSettingsHelp.aspx" />
+    <Content Include="EventLog.aspx" />
+    <Content Include="EventLogHelp.aspx" />
+    <Content Include="InterfaceAssignOrder.aspx" />
+    <Content Include="InterfaceAssignOrderHelp.aspx" />
+    <Content Include="InventoryGroups.aspx" />
+    <Content Include="InventoryGroupsHelp.aspx" />
+    <Content Include="jquery-ui\external\jquery\jquery.js" />
+    <Content Include="jquery-ui\images\ui-bg_flat_0_99ccff_40x100.png" />
+    <Content Include="jquery-ui\images\ui-bg_flat_0_ffffff_40x100.png" />
+    <Content Include="jquery-ui\images\ui-bg_flat_75_003399_40x100.png" />
+    <Content Include="jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery-ui\images\ui-bg_glass_65_99ccff_1x400.png" />
+    <Content Include="jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery-ui\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui\images\ui-icons_003399_256x240.png" />
+    <Content Include="jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui\images\ui-icons_99ccff_256x240.png" />
+    <Content Include="jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui.css" />
+    <Content Include="jquery-ui\jquery-ui.js" />
+    <Content Include="jquery-ui\jquery-ui.min.css" />
+    <Content Include="jquery-ui\jquery-ui.min.js" />
+    <Content Include="jquery-ui\jquery-ui.structure.css" />
+    <Content Include="jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="jquery-ui\jquery-ui.theme.css" />
+    <Content Include="jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="OrderSettings.aspx" />
+    <Content Include="OrderSettingsHelp.aspx" />
+    <Content Include="PanelBulkProductSettingsHelp.aspx" />
+    <Content Include="PrintTickets.aspx" />
+    <Content Include="PanelBulkProductsHelp.aspx" />
+    <Content Include="DeleteOrdersHelp.aspx" />
+    <Content Include="DeleteOrders.aspx" />
+    <Content Include="CustomFields.aspx" />
+    <Content Include="CustomFieldsHelp.aspx" />
+    <Content Include="DriverHistory.aspx" />
+    <Content Include="DriverHistoryView.aspx" />
+    <Content Include="Drivers.aspx" />
+    <Content Include="DisplayContent.aspx" />
+    <Content Include="InProgressRecords.aspx" />
+    <Content Include="InProgressRecordsHelp.aspx" />
+    <Content Include="ReceivingPickTicket.aspx" />
+    <Content Include="ReceivingPurchaseOrderListHelp.aspx" />
+    <Content Include="ReceivingPurchaseOrderListView.aspx" />
+    <Content Include="ReceivingPurchaseOrderList.aspx" />
+    <Content Include="Reporting\Report.aspx" />
+    <Content Include="Reporting\ReportDesigner.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Main.Master" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\TimePicker\jquery-ui-sliderAccess.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StorageLocations.aspx" />
+    <Content Include="StorageLocationsHelp.aspx" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="Styles\clear.css" />
+    <Content Include="Styles\PickTicketCustom.Sample.css" />
+    <Content Include="TransportHistoryView.aspx" />
+    <Content Include="TransportInspectionQuestions.aspx" />
+    <Content Include="Interfaces.aspx" />
+    <Content Include="Owners.aspx" />
+    <Content Include="ordersummary.aspx" />
+    <Content Include="PanelGroupsHelp.aspx" />
+    <Content Include="PanelGroups.aspx" />
+    <Content Include="Panels.aspx" />
+    <Content Include="PickTicket.aspx" />
+    <Content Include="images\arrow-down-2.png" />
+    <Content Include="images\arrow-left-2.png" />
+    <Content Include="images\arrow-right-2.png" />
+    <Content Include="images\arrow-up-2.png" />
+    <Content Include="images\Calendar_scheduleHS.png" />
+    <Content Include="InterfaceTicketStatus.aspx" />
+    <Content Include="InterfaceTicketStatusHelp.aspx" />
+    <Content Include="InventoryChangeReportView.aspx" />
+    <Content Include="InventoryReportView.aspx" />
+    <Content Include="PanelBulkProducts.aspx" />
+    <Content Include="ProductGroups.aspx" />
+    <Content Include="ProductGroupsHelp.aspx" />
+    <Content Include="Products.aspx" />
+    <Content Include="BulkProductUsageReport.aspx" />
+    <Content Include="BulkProductUsageReportHelp.aspx" />
+    <Content Include="BulkProductUsageReportView.aspx" />
+    <Content Include="ReceivingActivityReport.aspx" />
+    <Content Include="ReceivingActivityReportHelp.aspx" />
+    <Content Include="ReceivingActivityReportView.aspx" />
+    <Content Include="CropTypesHelp.aspx" />
+    <Content Include="CustomerActivityReportHelp.aspx" />
+    <Content Include="CustomerMasterFileHelp.aspx" />
+    <Content Include="CustomPagesHelp.aspx" />
+    <Content Include="DischargeLocationsHelp.aspx" />
+    <Content Include="DriverHistoryHelp.aspx" />
+    <Content Include="DriverReportHelp.aspx" />
+    <Content Include="DriversHelp.aspx" />
+    <Content Include="EmailReports.aspx" />
+    <Content Include="EmailReportsHelp.aspx" />
+    <Content Include="Emails.aspx" />
+    <Content Include="EmailsHelp.aspx" />
+    <Content Include="FacilitiesHelp.aspx" />
+    <Content Include="GeneralSettingsHelp.aspx" />
+    <Content Include="Help.aspx" />
+    <Content Include="help.png" />
+    <Content Include="helpstyle.css" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\ShortcutSmall.png" />
+    <Content Include="TransportInspectionQuestionsHelp.aspx" />
+    <Content Include="InterfacesHelp.aspx" />
+    <Content Include="InterfaceItemsHelp.aspx" />
+    <Content Include="InterfaceTypes.aspx" />
+    <Content Include="InterfaceTypesHelp.aspx" />
+    <Content Include="InterfaceItems.aspx" />
+    <Content Include="InterfaceUsageReport.aspx" />
+    <Content Include="InterfaceUsageReportHelp.aspx" />
+    <Content Include="InterfaceUsageReportView.aspx" />
+    <Content Include="InventoryChangeReportHelp.aspx" />
+    <Content Include="InventoryHelp.aspx" />
+    <Content Include="OrderListHelp.aspx" />
+    <Content Include="OrdersHelp.aspx" />
+    <Content Include="OwnersHelp.aspx" />
+    <Content Include="PanelsHelp.aspx" />
+    <Content Include="PastOrdersHelp.aspx" />
+    <Content Include="PastReceivingHelp.aspx" />
+    <Content Include="PointOfSaleHelp.aspx" />
+    <Content Include="ProductAllocation.aspx" />
+    <Content Include="Bays.aspx" />
+    <Content Include="BulkProductAnalysis.aspx" />
+    <Content Include="Branches.aspx" />
+    <Content Include="ContainerEquipment.aspx" />
+    <Content Include="ContainerEquipmentTypes.aspx" />
+    <Content Include="ContainerHistory.aspx" />
+    <Content Include="ContainerHistoryView.aspx" />
+    <Content Include="Containers.aspx" />
+    <Content Include="AccountDestinations.aspx" />
+    <Content Include="CropTypes.aspx" />
+    <Content Include="Custom.aspx" />
+    <Content Include="CustomerMasterFileView.aspx" />
+    <Content Include="CustomPages.aspx" />
+    <Content Include="DefaultChemicalAnalysis.aspx" />
+    <Content Include="DefaultEthanolAnalysis.aspx" />
+    <Content Include="DefaultGrainAnalysis.aspx" />
+    <Content Include="DriverReport.aspx" />
+    <Content Include="borders.css" />
+    <Content Include="CustomerActivityReport.aspx" />
+    <Content Include="CustomerActivityReportView.aspx" />
+    <Content Include="CustomerMasterFile.aspx" />
+    <Content Include="FavIcon.ico" />
+    <Content Include="GeneralSettings.aspx" />
+    <Content Include="PastOrders.aspx" />
+    <Content Include="PointOfSale.aspx" />
+    <Content Include="Inventory.aspx" />
+    <Content Include="InventoryChangeReport.aspx" />
+    <Content Include="PastReceiving.aspx" />
+    <Content Include="ProductAllocationHelp.aspx" />
+    <Content Include="ProductAllocationView.aspx" />
+    <Content Include="ProductList.aspx" />
+    <Content Include="ProductListHelp.aspx" />
+    <Content Include="ProductListView.aspx" />
+    <Content Include="ProductsHelp.aspx" />
+    <Content Include="Receipts.aspx" />
+    <Content Include="ReceiptsHelp.aspx" />
+    <Content Include="Receiving.aspx" />
+    <Content Include="ReceivingHelp.aspx" />
+    <Content Include="ReceivingPFV.aspx" />
+    <Content Include="ReceivingPoSettings.aspx" />
+    <Content Include="ReceivingPoSettingsHelp.aspx" />
+    <Content Include="ReceivingTicket.aspx" />
+    <Content Include="ReceivingTicketPFV.aspx" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\page-controller.js" />
+    <Content Include="Scripts\soap-1.0.1.js" />
+    <Content Include="Scripts\TimePicker\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\TimePicker\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="StagedOrdersHelp.aspx" />
+    <Content Include="StagedOrders.aspx" />
+    <Content Include="Styles\kaco-webfont.svg" />
+    <Content Include="Styles\site-phone.css" />
+    <Content Include="Styles\site-tablet.css" />
+    <Content Include="Styles\site.css" />
+    <Content Include="Styles\TicketCustom.Sample.css" />
+    <Content Include="Styles\TimePicker\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="Styles\TimePicker\jquery-ui-timepicker-addon.css" />
+    <Content Include="Suppliers.aspx" />
+    <Content Include="SuppliersHelp.aspx" />
+    <Content Include="TankAlarmHistory.aspx" />
+    <Content Include="TankAlarmHistoryHelp.aspx" />
+    <Content Include="TankAnalysis.aspx" />
+    <Content Include="TankAnalysisHelp.aspx" />
+    <Content Include="TankGroupsHelp.aspx" />
+    <Content Include="TankLevels.aspx" />
+    <Content Include="TankLevelsHelp.aspx" />
+    <Content Include="TankLevelTrends.aspx" />
+    <Content Include="TankLevelTrendData.aspx" />
+    <Content Include="DischargeLocations.aspx" />
+    <Content Include="Facilities.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="minitabs.css" />
+    <Content Include="minitabs2.css" />
+    <Content Include="Orders.aspx" />
+    <Content Include="style.css" />
+    <Content Include="style2.css" />
+    <Content Include="TankGroups.aspx" />
+    <Content Include="TankLevelTrendsHelp.aspx" />
+    <Content Include="Tanks.aspx" />
+    <Content Include="TanksHelp.aspx" />
+    <Content Include="Template.aspx" />
+    <Content Include="ticket.aspx" />
+    <Content Include="TicketSettings.aspx" />
+    <Content Include="TicketSettingsHelp.aspx" />
+    <Content Include="TrackReport.aspx" />
+    <Content Include="TrackReportHelp.aspx" />
+    <Content Include="TrackReportView.aspx" />
+    <Content Include="Tracks.aspx" />
+    <Content Include="TracksHelp.aspx" />
+    <Content Include="TransportHistory.aspx" />
+    <Content Include="TransportHistoryHelp.aspx" />
+    <Content Include="TransportReport.aspx" />
+    <Content Include="TransportReportHelp.aspx" />
+    <Content Include="Transports.aspx" />
+    <Content Include="TransportsHelp.aspx" />
+    <Content Include="TransportTrackingReport.aspx" />
+    <Content Include="TransportTrackingReportHelp.aspx" />
+    <Content Include="TransportTrackingReportPFV.aspx" />
+    <Content Include="TransportTypes.aspx" />
+    <Content Include="TransportTypesHelp.aspx" />
+    <Content Include="TransportUsageReport.aspx" />
+    <Content Include="TransportUsageReportHelp.aspx" />
+    <Content Include="TransportUsageReportView.aspx" />
+    <Content Include="Units.aspx" />
+    <Content Include="UnitsHelp.aspx" />
+    <Content Include="OrderList.aspx" />
+    <Content Include="OrderListView.aspx" />
+    <Content Include="UserControls\BackNextButtons.ascx" />
+    <Content Include="UserControls\BulkPanelSettings.ascx" />
+    <Content Include="UserControls\Recipes.ascx" />
+    <Content Include="UserControls\BulkProducts\BulkProductSetup.ascx" />
+    <Content Include="UserControls\ProductInterfaces.ascx" />
+    <Content Include="UserControls\Product.ascx" />
+    <Content Include="UserControls\SelectOwners.ascx" />
+    <Content Include="UserControls\SelectProduct.ascx" />
+    <Content Include="UserProfiles.aspx" />
+    <Content Include="UserProfilesHelp.aspx" />
+    <Content Include="Users.aspx" />
+    <Content Include="UsersHelp.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WebService.asmx" />
+    <Content Include="WebServiceOpen.asmx" />
+    <Content Include="Welcome.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AboutHelp.aspx.designer.vb">
+      <DependentUpon>AboutHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutHelp.aspx.vb">
+      <DependentUpon>AboutHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AccountCoupling.aspx.designer.vb">
+      <DependentUpon>AccountCoupling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCoupling.aspx.vb">
+      <DependentUpon>AccountCoupling.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AccountCouplingHelp.aspx.designer.vb">
+      <DependentUpon>AccountCouplingHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCouplingHelp.aspx.vb">
+      <DependentUpon>AccountCouplingHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AccountCouplingSettings.aspx.designer.vb">
+      <DependentUpon>AccountCouplingSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCouplingSettings.aspx.vb">
+      <DependentUpon>AccountCouplingSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountCouplingSettingsHelp.aspx.designer.vb">
+      <DependentUpon>AccountCouplingSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCouplingSettingsHelp.aspx.vb">
+      <DependentUpon>AccountCouplingSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AccountDestinationsHelp.aspx.designer.vb">
+      <DependentUpon>AccountDestinationsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDestinationsHelp.aspx.vb">
+      <DependentUpon>AccountDestinationsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Accounts.aspx.designer.vb">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts.aspx.vb">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AssemblyAttributes.vb" />
+    <Compile Include="AssignmentsHelp.aspx.designer.vb">
+      <DependentUpon>AssignmentsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignmentsHelp.aspx.vb">
+      <DependentUpon>AssignmentsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AccountsHelp.aspx.designer.vb">
+      <DependentUpon>AccountsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountsHelp.aspx.vb">
+      <DependentUpon>AccountsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdvancedSearch.aspx.designer.vb">
+      <DependentUpon>AdvancedSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedSearch.aspx.vb">
+      <DependentUpon>AdvancedSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdvancedSearchHelp.aspx.designer.vb">
+      <DependentUpon>AdvancedSearchHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedSearchHelp.aspx.vb">
+      <DependentUpon>AdvancedSearchHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllCarriers.aspx.designer.vb">
+      <DependentUpon>AllCarriers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllCarriers.aspx.vb">
+      <DependentUpon>AllCarriers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllCarriersHelp.aspx.designer.vb">
+      <DependentUpon>AllCarriersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllCarriersHelp.aspx.vb">
+      <DependentUpon>AllCarriersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllCarriersView.aspx.designer.vb">
+      <DependentUpon>AllCarriersView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllCarriersView.aspx.vb">
+      <DependentUpon>AllCarriersView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllContainerEquipment.aspx.designer.vb">
+      <DependentUpon>AllContainerEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainerEquipment.aspx.vb">
+      <DependentUpon>AllContainerEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllContainerEquipmentHelp.aspx.designer.vb">
+      <DependentUpon>AllContainerEquipmentHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainerEquipmentHelp.aspx.vb">
+      <DependentUpon>AllContainerEquipmentHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllContainerEquipmentView.aspx.designer.vb">
+      <DependentUpon>AllContainerEquipmentView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainerEquipmentView.aspx.vb">
+      <DependentUpon>AllContainerEquipmentView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllContainers.aspx.designer.vb">
+      <DependentUpon>AllContainers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainers.aspx.vb">
+      <DependentUpon>AllContainers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllContainersHelp.aspx.designer.vb">
+      <DependentUpon>AllContainersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainersHelp.aspx.vb">
+      <DependentUpon>AllContainersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllContainersView.aspx.designer.vb">
+      <DependentUpon>AllContainersView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllContainersView.aspx.vb">
+      <DependentUpon>AllContainersView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllDriversHelp.aspx.designer.vb">
+      <DependentUpon>AllDriversHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllDriversHelp.aspx.vb">
+      <DependentUpon>AllDriversHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AllTransportsHelp.aspx.designer.vb">
+      <DependentUpon>AllTransportsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransportsHelp.aspx.vb">
+      <DependentUpon>AllTransportsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AnalysisSettings.aspx.designer.vb">
+      <DependentUpon>AnalysisSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisSettings.aspx.vb">
+      <DependentUpon>AnalysisSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnalysisSettingsHelp.aspx.designer.vb">
+      <DependentUpon>AnalysisSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisSettingsHelp.aspx.vb">
+      <DependentUpon>AnalysisSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationUsage.aspx.designer.vb">
+      <DependentUpon>ApplicationUsage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUsage.aspx.vb">
+      <DependentUpon>ApplicationUsage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ApplicatorsHelp.aspx.designer.vb">
+      <DependentUpon>ApplicatorsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicatorsHelp.aspx.vb">
+      <DependentUpon>ApplicatorsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrders.aspx.designer.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrders.aspx.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrdersHelp.aspx.designer.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrdersHelp.aspx.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrderTickets.aspx.designer.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrderTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrderTickets.aspx.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrderTickets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrderTicketsHelp.aspx.designer.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrderTicketsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveReceivingPurchaseOrderTicketsHelp.aspx.vb">
+      <DependentUpon>ArchiveReceivingPurchaseOrderTicketsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Assignments.aspx.designer.vb">
+      <DependentUpon>Assignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments.aspx.vb">
+      <DependentUpon>Assignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditTableChanges.aspx.designer.vb">
+      <DependentUpon>AuditTableChanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTableChanges.aspx.vb">
+      <DependentUpon>AuditTableChanges.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AuditTableChangesHelp.aspx.designer.vb">
+      <DependentUpon>AuditTableChangesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTableChangesHelp.aspx.vb">
+      <DependentUpon>AuditTableChangesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AuditTableChangesReport.asmx.vb">
+      <DependentUpon>AuditTableChangesReport.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AuditTableFields.aspx.designer.vb">
+      <DependentUpon>AuditTableFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTableFields.aspx.vb">
+      <DependentUpon>AuditTableFields.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AuditTableFieldsHelp.aspx.designer.vb">
+      <DependentUpon>AuditTableFieldsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTableFieldsHelp.aspx.vb">
+      <DependentUpon>AuditTableFieldsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BaysHelp.aspx.designer.vb">
+      <DependentUpon>BaysHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaysHelp.aspx.vb">
+      <DependentUpon>BaysHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BranchesHelp.aspx.designer.vb">
+      <DependentUpon>BranchesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchesHelp.aspx.vb">
+      <DependentUpon>BranchesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductAllocation.aspx.designer.vb">
+      <DependentUpon>BulkProductAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductAllocation.aspx.vb">
+      <DependentUpon>BulkProductAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductAllocationHelp.aspx.designer.vb">
+      <DependentUpon>BulkProductAllocationHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductAllocationHelp.aspx.vb">
+      <DependentUpon>BulkProductAllocationHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductAllocationView.aspx.designer.vb">
+      <DependentUpon>BulkProductAllocationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductAllocationView.aspx.vb">
+      <DependentUpon>BulkProductAllocationView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductAnalysisHelp.aspx.designer.vb">
+      <DependentUpon>BulkProductAnalysisHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductAnalysisHelp.aspx.vb">
+      <DependentUpon>BulkProductAnalysisHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerInventory.aspx.designer.vb">
+      <DependentUpon>ContainerInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerInventory.aspx.vb">
+      <DependentUpon>ContainerInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContainerInventoryHelp.aspx.designer.vb">
+      <DependentUpon>ContainerInventoryHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerInventoryHelp.aspx.vb">
+      <DependentUpon>ContainerInventoryHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContainerInventoryPFV.aspx.designer.vb">
+      <DependentUpon>ContainerInventoryPFV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerInventoryPFV.aspx.vb">
+      <DependentUpon>ContainerInventoryPFV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Containers.aspx.designer.vb">
+      <DependentUpon>Containers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomAnalysisTemplate.aspx.designer.vb">
+      <DependentUpon>CustomAnalysisTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomAnalysisTemplate.aspx.vb">
+      <DependentUpon>CustomAnalysisTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.vb">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.vb">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductSetup.aspx.designer.vb">
+      <DependentUpon>ProductSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSetup.aspx.vb">
+      <DependentUpon>ProductSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultContainerLabel.aspx.designer.vb">
+      <DependentUpon>DefaultContainerLabel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultContainerLabel.aspx.vb">
+      <DependentUpon>DefaultContainerLabel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultContainerLabelSettings.aspx.designer.vb">
+      <DependentUpon>DefaultContainerLabelSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultContainerLabelSettings.aspx.vb">
+      <DependentUpon>DefaultContainerLabelSettings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultContainerLabelSettingsHelp.aspx.designer.vb">
+      <DependentUpon>DefaultContainerLabelSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultContainerLabelSettingsHelp.aspx.vb">
+      <DependentUpon>DefaultContainerLabelSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultHazmatAnalysis.aspx.designer.vb">
+      <DependentUpon>DefaultHazmatAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultHazmatAnalysis.aspx.vb">
+      <DependentUpon>DefaultHazmatAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultReceivingWebPickTicketSettings.aspx.designer.vb">
+      <DependentUpon>DefaultReceivingWebPickTicketSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultReceivingWebPickTicketSettings.aspx.vb">
+      <DependentUpon>DefaultReceivingWebPickTicketSettings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultReceivingWebPickTicketSettingsHelp.aspx.designer.vb">
+      <DependentUpon>DefaultReceivingWebPickTicketSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultReceivingWebPickTicketSettingsHelp.aspx.vb">
+      <DependentUpon>DefaultReceivingWebPickTicketSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DeleteReceivingPurchaseOrders.aspx.designer.vb">
+      <DependentUpon>DeleteReceivingPurchaseOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteReceivingPurchaseOrders.aspx.vb">
+      <DependentUpon>DeleteReceivingPurchaseOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DeleteReceivingPurchaseOrdersHelp.aspx.designer.vb">
+      <DependentUpon>DeleteReceivingPurchaseOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteReceivingPurchaseOrdersHelp.aspx.vb">
+      <DependentUpon>DeleteReceivingPurchaseOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatus.aspx.designer.vb">
+      <DependentUpon>InterfaceReceivingTicketStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatus.aspx.vb">
+      <DependentUpon>InterfaceReceivingTicketStatus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatusHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceReceivingTicketStatusHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatusHelp.aspx.vb">
+      <DependentUpon>InterfaceReceivingTicketStatusHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatusView.aspx.designer.vb">
+      <DependentUpon>InterfaceReceivingTicketStatusView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceReceivingTicketStatusView.aspx.vb">
+      <DependentUpon>InterfaceReceivingTicketStatusView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTicketStatusView.aspx.designer.vb">
+      <DependentUpon>InterfaceTicketStatusView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTicketStatusView.aspx.vb">
+      <DependentUpon>InterfaceTicketStatusView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Lots.aspx.designer.vb">
+      <DependentUpon>Lots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lots.aspx.vb">
+      <DependentUpon>Lots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LotsHelp.aspx.designer.vb">
+      <DependentUpon>LotsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotsHelp.aspx.vb">
+      <DependentUpon>LotsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications.aspx.designer.vb">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications.aspx.vb">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProductFillLimits.aspx.designer.vb">
+      <DependentUpon>PanelBulkProductFillLimits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProductFillLimits.aspx.vb">
+      <DependentUpon>PanelBulkProductFillLimits.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProductFillLimitsHelp.aspx.designer.vb">
+      <DependentUpon>PanelBulkProductFillLimitsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProductFillLimitsHelp.aspx.vb">
+      <DependentUpon>PanelBulkProductFillLimitsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProductSettings.aspx.designer.vb">
+      <DependentUpon>PanelBulkProductSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProductSettings.aspx.vb">
+      <DependentUpon>PanelBulkProductSettings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProducts.aspx.designer.vb">
+      <DependentUpon>BulkProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProducts.aspx.vb">
+      <DependentUpon>BulkProducts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductsHelp.aspx.designer.vb">
+      <DependentUpon>BulkProductsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductsHelp.aspx.vb">
+      <DependentUpon>BulkProductsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Carriers.aspx.designer.vb">
+      <DependentUpon>Carriers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carriers.aspx.vb">
+      <DependentUpon>Carriers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CarriersHelp.aspx.designer.vb">
+      <DependentUpon>CarriersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarriersHelp.aspx.vb">
+      <DependentUpon>CarriersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerEquipmentHelp.aspx.designer.vb">
+      <DependentUpon>ContainerEquipmentHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerEquipmentHelp.aspx.vb">
+      <DependentUpon>ContainerEquipmentHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerEquipmentTypesHelp.aspx.designer.vb">
+      <DependentUpon>ContainerEquipmentTypesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerEquipmentTypesHelp.aspx.vb">
+      <DependentUpon>ContainerEquipmentTypesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerSettings.aspx.designer.vb">
+      <DependentUpon>ContainerSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerSettings.aspx.vb">
+      <DependentUpon>ContainerSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContainerSettingsHelp.aspx.designer.vb">
+      <DependentUpon>ContainerSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerSettingsHelp.aspx.vb">
+      <DependentUpon>ContainerSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainersHelp.aspx.designer.vb">
+      <DependentUpon>ContainersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainersHelp.aspx.vb">
+      <DependentUpon>ContainersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerTypes.aspx.designer.vb">
+      <DependentUpon>ContainerTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerTypes.aspx.vb">
+      <DependentUpon>ContainerTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContainerTypesHelp.aspx.designer.vb">
+      <DependentUpon>ContainerTypesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerTypesHelp.aspx.vb">
+      <DependentUpon>ContainerTypesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationUsageHelp.aspx.designer.vb">
+      <DependentUpon>ApplicationUsageHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUsageHelp.aspx.vb">
+      <DependentUpon>ApplicationUsageHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationUsageView.aspx.designer.vb">
+      <DependentUpon>ApplicationUsageView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUsageView.aspx.vb">
+      <DependentUpon>ApplicationUsageView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveTickets.aspx.designer.vb">
+      <DependentUpon>ArchiveTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveTickets.aspx.vb">
+      <DependentUpon>ArchiveTickets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveOrders.aspx.designer.vb">
+      <DependentUpon>ArchiveOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveOrders.aspx.vb">
+      <DependentUpon>ArchiveOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveOrdersHelp.aspx.designer.vb">
+      <DependentUpon>ArchiveOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveOrdersHelp.aspx.vb">
+      <DependentUpon>ArchiveOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveTicketsHelp.aspx.designer.vb">
+      <DependentUpon>ArchiveTicketsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveTicketsHelp.aspx.vb">
+      <DependentUpon>ArchiveTicketsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomLoadQuestions.aspx.designer.vb">
+      <DependentUpon>CustomLoadQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomLoadQuestions.aspx.vb">
+      <DependentUpon>CustomLoadQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomLoadQuestionsHelp.aspx.designer.vb">
+      <DependentUpon>CustomLoadQuestionsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomLoadQuestionsHelp.aspx.vb">
+      <DependentUpon>CustomLoadQuestionsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultDeliveryWebTicketSettings.aspx.designer.vb">
+      <DependentUpon>DefaultDeliveryWebTicketSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDeliveryWebTicketSettings.aspx.vb">
+      <DependentUpon>DefaultDeliveryWebTicketSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultDeliveryWebTicketSettingsHelp.aspx.designer.vb">
+      <DependentUpon>DefaultDeliveryWebTicketSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDeliveryWebTicketSettingsHelp.aspx.vb">
+      <DependentUpon>DefaultDeliveryWebTicketSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultOrderSummarySettings.aspx.designer.vb">
+      <DependentUpon>DefaultOrderSummarySettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultOrderSummarySettings.aspx.vb">
+      <DependentUpon>DefaultOrderSummarySettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultOrderSummarySettingsHelp.aspx.designer.vb">
+      <DependentUpon>DefaultOrderSummarySettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultOrderSummarySettingsHelp.aspx.vb">
+      <DependentUpon>DefaultOrderSummarySettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultReceivingWebTicketSettings.aspx.designer.vb">
+      <DependentUpon>DefaultReceivingWebTicketSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultReceivingWebTicketSettings.aspx.vb">
+      <DependentUpon>DefaultReceivingWebTicketSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultReceivingWebTicketSettingsHelp.aspx.designer.vb">
+      <DependentUpon>DefaultReceivingWebTicketSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultReceivingWebTicketSettingsHelp.aspx.vb">
+      <DependentUpon>DefaultReceivingWebTicketSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EmailSettings.aspx.designer.vb">
+      <DependentUpon>EmailSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSettings.aspx.vb">
+      <DependentUpon>EmailSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailSettingsHelp.aspx.designer.vb">
+      <DependentUpon>EmailSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSettingsHelp.aspx.vb">
+      <DependentUpon>EmailSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EventLog.aspx.designer.vb">
+      <DependentUpon>EventLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventLog.aspx.vb">
+      <DependentUpon>EventLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventLogHelp.aspx.designer.vb">
+      <DependentUpon>EventLogHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventLogHelp.aspx.vb">
+      <DependentUpon>EventLogHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceAssignOrder.aspx.designer.vb">
+      <DependentUpon>InterfaceAssignOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceAssignOrder.aspx.vb">
+      <DependentUpon>InterfaceAssignOrder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceAssignOrderHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceAssignOrderHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceAssignOrderHelp.aspx.vb">
+      <DependentUpon>InterfaceAssignOrderHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryGroups.aspx.designer.vb">
+      <DependentUpon>InventoryGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryGroups.aspx.vb">
+      <DependentUpon>InventoryGroups.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryGroupsHelp.aspx.designer.vb">
+      <DependentUpon>InventoryGroupsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryGroupsHelp.aspx.vb">
+      <DependentUpon>InventoryGroupsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderSettings.aspx.designer.vb">
+      <DependentUpon>OrderSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSettings.aspx.vb">
+      <DependentUpon>OrderSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSettingsHelp.aspx.designer.vb">
+      <DependentUpon>OrderSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSettingsHelp.aspx.vb">
+      <DependentUpon>OrderSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProductSettingsHelp.aspx.designer.vb">
+      <DependentUpon>PanelBulkProductSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProductSettingsHelp.aspx.vb">
+      <DependentUpon>PanelBulkProductSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PrintTickets.aspx.designer.vb">
+      <DependentUpon>PrintTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTickets.aspx.vb">
+      <DependentUpon>PrintTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProductsHelp.aspx.designer.vb">
+      <DependentUpon>PanelBulkProductsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProductsHelp.aspx.vb">
+      <DependentUpon>PanelBulkProductsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DeleteOrdersHelp.aspx.designer.vb">
+      <DependentUpon>DeleteOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteOrdersHelp.aspx.vb">
+      <DependentUpon>DeleteOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DeleteOrders.aspx.designer.vb">
+      <DependentUpon>DeleteOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteOrders.aspx.vb">
+      <DependentUpon>DeleteOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomFields.aspx.designer.vb">
+      <DependentUpon>CustomFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomFields.aspx.vb">
+      <DependentUpon>CustomFields.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomFieldsHelp.aspx.designer.vb">
+      <DependentUpon>CustomFieldsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomFieldsHelp.aspx.vb">
+      <DependentUpon>CustomFieldsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DriverHistory.aspx.designer.vb">
+      <DependentUpon>DriverHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverHistory.aspx.vb">
+      <DependentUpon>DriverHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DriverHistoryView.aspx.designer.vb">
+      <DependentUpon>DriverHistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverHistoryView.aspx.vb">
+      <DependentUpon>DriverHistoryView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Drivers.aspx.designer.vb">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers.aspx.vb">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayContent.aspx.designer.vb">
+      <DependentUpon>DisplayContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayContent.aspx.vb">
+      <DependentUpon>DisplayContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InProgressRecords.aspx.designer.vb">
+      <DependentUpon>InProgressRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InProgressRecords.aspx.vb">
+      <DependentUpon>InProgressRecords.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InProgressRecordsHelp.aspx.designer.vb">
+      <DependentUpon>InProgressRecordsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InProgressRecordsHelp.aspx.vb">
+      <DependentUpon>InProgressRecordsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPickTicket.aspx.designer.vb">
+      <DependentUpon>ReceivingPickTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPickTicket.aspx.vb">
+      <DependentUpon>ReceivingPickTicket.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderListHelp.aspx.designer.vb">
+      <DependentUpon>ReceivingPurchaseOrderListHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderListHelp.aspx.vb">
+      <DependentUpon>ReceivingPurchaseOrderListHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderListView.aspx.designer.vb">
+      <DependentUpon>ReceivingPurchaseOrderListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderListView.aspx.vb">
+      <DependentUpon>ReceivingPurchaseOrderListView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderList.aspx.designer.vb">
+      <DependentUpon>ReceivingPurchaseOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPurchaseOrderList.aspx.vb">
+      <DependentUpon>ReceivingPurchaseOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StorageLocations.aspx.designer.vb">
+      <DependentUpon>StorageLocations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StorageLocations.aspx.vb">
+      <DependentUpon>StorageLocations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StorageLocationsHelp.aspx.designer.vb">
+      <DependentUpon>StorageLocationsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StorageLocationsHelp.aspx.vb">
+      <DependentUpon>StorageLocationsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\DynamicRDLCGenerator\ReportBuilderEntities.vb" />
+    <Compile Include="Reporting\DynamicRDLCGenerator\ReportEngine.vb" />
+    <Compile Include="Reporting\Report.aspx.designer.vb">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Report.aspx.vb">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportDesigner.aspx.designer.vb">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportDesigner.aspx.vb">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportHistoryView.aspx.designer.vb">
+      <DependentUpon>TransportHistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportHistoryView.aspx.vb">
+      <DependentUpon>TransportHistoryView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportInspectionQuestions.aspx.designer.vb">
+      <DependentUpon>TransportInspectionQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportInspectionQuestions.aspx.vb">
+      <DependentUpon>TransportInspectionQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Interfaces.aspx.designer.vb">
+      <DependentUpon>Interfaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces.aspx.vb">
+      <DependentUpon>Interfaces.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ordersummary.aspx.designer.vb">
+      <DependentUpon>ordersummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ordersummary.aspx.vb">
+      <DependentUpon>ordersummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Owners.aspx.designer.vb">
+      <DependentUpon>Owners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Owners.aspx.vb">
+      <DependentUpon>Owners.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelGroupsHelp.aspx.designer.vb">
+      <DependentUpon>PanelGroupsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelGroupsHelp.aspx.vb">
+      <DependentUpon>PanelGroupsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelGroups.aspx.designer.vb">
+      <DependentUpon>PanelGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelGroups.aspx.vb">
+      <DependentUpon>PanelGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panels.aspx.designer.vb">
+      <DependentUpon>Panels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Panels.aspx.vb">
+      <DependentUpon>Panels.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PickTicket.aspx.designer.vb">
+      <DependentUpon>PickTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PickTicket.aspx.vb">
+      <DependentUpon>PickTicket.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTicketStatus.aspx.designer.vb">
+      <DependentUpon>InterfaceTicketStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTicketStatus.aspx.vb">
+      <DependentUpon>InterfaceTicketStatus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTicketStatusHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceTicketStatusHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTicketStatusHelp.aspx.vb">
+      <DependentUpon>InterfaceTicketStatusHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryChangeReportView.aspx.designer.vb">
+      <DependentUpon>InventoryChangeReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryChangeReportView.aspx.vb">
+      <DependentUpon>InventoryChangeReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryReportView.aspx.designer.vb">
+      <DependentUpon>InventoryReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryReportView.aspx.vb">
+      <DependentUpon>InventoryReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelBulkProducts.aspx.designer.vb">
+      <DependentUpon>PanelBulkProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelBulkProducts.aspx.vb">
+      <DependentUpon>PanelBulkProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductGroups.aspx.designer.vb">
+      <DependentUpon>ProductGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductGroups.aspx.vb">
+      <DependentUpon>ProductGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductGroupsHelp.aspx.designer.vb">
+      <DependentUpon>ProductGroupsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductGroupsHelp.aspx.vb">
+      <DependentUpon>ProductGroupsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.vb">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.vb">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductUsageReport.aspx.designer.vb">
+      <DependentUpon>BulkProductUsageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductUsageReport.aspx.vb">
+      <DependentUpon>BulkProductUsageReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductUsageReportHelp.aspx.designer.vb">
+      <DependentUpon>BulkProductUsageReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductUsageReportHelp.aspx.vb">
+      <DependentUpon>BulkProductUsageReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductUsageReportView.aspx.designer.vb">
+      <DependentUpon>BulkProductUsageReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductUsageReportView.aspx.vb">
+      <DependentUpon>BulkProductUsageReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingActivityReport.aspx.designer.vb">
+      <DependentUpon>ReceivingActivityReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingActivityReport.aspx.vb">
+      <DependentUpon>ReceivingActivityReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingActivityReportHelp.aspx.designer.vb">
+      <DependentUpon>ReceivingActivityReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingActivityReportHelp.aspx.vb">
+      <DependentUpon>ReceivingActivityReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingActivityReportView.aspx.designer.vb">
+      <DependentUpon>ReceivingActivityReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingActivityReportView.aspx.vb">
+      <DependentUpon>ReceivingActivityReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CropTypesHelp.aspx.designer.vb">
+      <DependentUpon>CropTypesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CropTypesHelp.aspx.vb">
+      <DependentUpon>CropTypesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerActivityReportHelp.aspx.designer.vb">
+      <DependentUpon>CustomerActivityReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerActivityReportHelp.aspx.vb">
+      <DependentUpon>CustomerActivityReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMasterFileHelp.aspx.designer.vb">
+      <DependentUpon>CustomerMasterFileHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMasterFileHelp.aspx.vb">
+      <DependentUpon>CustomerMasterFileHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomPagesHelp.aspx.designer.vb">
+      <DependentUpon>CustomPagesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPagesHelp.aspx.vb">
+      <DependentUpon>CustomPagesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DischargeLocationsHelp.aspx.designer.vb">
+      <DependentUpon>DischargeLocationsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DischargeLocationsHelp.aspx.vb">
+      <DependentUpon>DischargeLocationsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DriverHistoryHelp.aspx.designer.vb">
+      <DependentUpon>DriverHistoryHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverHistoryHelp.aspx.vb">
+      <DependentUpon>DriverHistoryHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DriverReportHelp.aspx.designer.vb">
+      <DependentUpon>DriverReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverReportHelp.aspx.vb">
+      <DependentUpon>DriverReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DriversHelp.aspx.designer.vb">
+      <DependentUpon>DriversHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriversHelp.aspx.vb">
+      <DependentUpon>DriversHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EmailReports.aspx.designer.vb">
+      <DependentUpon>EmailReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailReports.aspx.vb">
+      <DependentUpon>EmailReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailReportsHelp.aspx.designer.vb">
+      <DependentUpon>EmailReportsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailReportsHelp.aspx.vb">
+      <DependentUpon>EmailReportsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Emails.aspx.designer.vb">
+      <DependentUpon>Emails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Emails.aspx.vb">
+      <DependentUpon>Emails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailsHelp.aspx.designer.vb">
+      <DependentUpon>EmailsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailsHelp.aspx.vb">
+      <DependentUpon>EmailsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FacilitiesHelp.aspx.designer.vb">
+      <DependentUpon>FacilitiesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacilitiesHelp.aspx.vb">
+      <DependentUpon>FacilitiesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GeneralSettingsHelp.aspx.designer.vb">
+      <DependentUpon>GeneralSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettingsHelp.aspx.vb">
+      <DependentUpon>GeneralSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportInspectionQuestionsHelp.aspx.designer.vb">
+      <DependentUpon>TransportInspectionQuestionsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportInspectionQuestionsHelp.aspx.vb">
+      <DependentUpon>TransportInspectionQuestionsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfacesHelp.aspx.designer.vb">
+      <DependentUpon>InterfacesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesHelp.aspx.vb">
+      <DependentUpon>InterfacesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceItemsHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceItemsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceItemsHelp.aspx.vb">
+      <DependentUpon>InterfaceItemsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTypes.aspx.designer.vb">
+      <DependentUpon>InterfaceTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTypes.aspx.vb">
+      <DependentUpon>InterfaceTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTypesHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceTypesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTypesHelp.aspx.vb">
+      <DependentUpon>InterfaceTypesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceItems.aspx.designer.vb">
+      <DependentUpon>InterfaceItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceItems.aspx.vb">
+      <DependentUpon>InterfaceItems.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceUsageReport.aspx.designer.vb">
+      <DependentUpon>InterfaceUsageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceUsageReport.aspx.vb">
+      <DependentUpon>InterfaceUsageReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceUsageReportHelp.aspx.designer.vb">
+      <DependentUpon>InterfaceUsageReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceUsageReportHelp.aspx.vb">
+      <DependentUpon>InterfaceUsageReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceUsageReportView.aspx.designer.vb">
+      <DependentUpon>InterfaceUsageReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceUsageReportView.aspx.vb">
+      <DependentUpon>InterfaceUsageReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryChangeReportHelp.aspx.designer.vb">
+      <DependentUpon>InventoryChangeReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryChangeReportHelp.aspx.vb">
+      <DependentUpon>InventoryChangeReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InventoryHelp.aspx.designer.vb">
+      <DependentUpon>InventoryHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryHelp.aspx.vb">
+      <DependentUpon>InventoryHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderListHelp.aspx.designer.vb">
+      <DependentUpon>OrderListHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderListHelp.aspx.vb">
+      <DependentUpon>OrderListHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrdersHelp.aspx.designer.vb">
+      <DependentUpon>OrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersHelp.aspx.vb">
+      <DependentUpon>OrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OwnersHelp.aspx.designer.vb">
+      <DependentUpon>OwnersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OwnersHelp.aspx.vb">
+      <DependentUpon>OwnersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PanelsHelp.aspx.designer.vb">
+      <DependentUpon>PanelsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelsHelp.aspx.vb">
+      <DependentUpon>PanelsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PastOrdersHelp.aspx.designer.vb">
+      <DependentUpon>PastOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PastOrdersHelp.aspx.vb">
+      <DependentUpon>PastOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PastReceivingHelp.aspx.designer.vb">
+      <DependentUpon>PastReceivingHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PastReceivingHelp.aspx.vb">
+      <DependentUpon>PastReceivingHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PointOfSaleHelp.aspx.designer.vb">
+      <DependentUpon>PointOfSaleHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSaleHelp.aspx.vb">
+      <DependentUpon>PointOfSaleHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductAllocation.aspx.designer.vb">
+      <DependentUpon>ProductAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAllocation.aspx.vb">
+      <DependentUpon>ProductAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bays.aspx.designer.vb">
+      <DependentUpon>Bays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bays.aspx.vb">
+      <DependentUpon>Bays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkProductAnalysis.aspx.designer.vb">
+      <DependentUpon>BulkProductAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkProductAnalysis.aspx.vb">
+      <DependentUpon>BulkProductAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContainerEquipment.aspx.designer.vb">
+      <DependentUpon>ContainerEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerEquipment.aspx.vb">
+      <DependentUpon>ContainerEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerEquipmentTypes.aspx.designer.vb">
+      <DependentUpon>ContainerEquipmentTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerEquipmentTypes.aspx.vb">
+      <DependentUpon>ContainerEquipmentTypes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerHistory.aspx.designer.vb">
+      <DependentUpon>ContainerHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerHistory.aspx.vb">
+      <DependentUpon>ContainerHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContainerHistoryView.aspx.designer.vb">
+      <DependentUpon>ContainerHistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerHistoryView.aspx.vb">
+      <DependentUpon>ContainerHistoryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom.aspx.designer.vb">
+      <DependentUpon>Custom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom.aspx.vb">
+      <DependentUpon>Custom.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomPages.aspx.designer.vb">
+      <DependentUpon>CustomPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPages.aspx.vb">
+      <DependentUpon>CustomPages.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultChemicalAnalysis.aspx.designer.vb">
+      <DependentUpon>DefaultChemicalAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultChemicalAnalysis.aspx.vb">
+      <DependentUpon>DefaultChemicalAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultEthanolAnalysis.aspx.designer.vb">
+      <DependentUpon>DefaultEthanolAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultEthanolAnalysis.aspx.vb">
+      <DependentUpon>DefaultEthanolAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultGrainAnalysis.aspx.designer.vb">
+      <DependentUpon>DefaultGrainAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultGrainAnalysis.aspx.vb">
+      <DependentUpon>DefaultGrainAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GeneralSettings.aspx.designer.vb">
+      <DependentUpon>GeneralSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettings.aspx.vb">
+      <DependentUpon>GeneralSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PastOrders.aspx.designer.vb">
+      <DependentUpon>PastOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PastOrders.aspx.vb">
+      <DependentUpon>PastOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductAllocationHelp.aspx.designer.vb">
+      <DependentUpon>ProductAllocationHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAllocationHelp.aspx.vb">
+      <DependentUpon>ProductAllocationHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductAllocationView.aspx.designer.vb">
+      <DependentUpon>ProductAllocationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAllocationView.aspx.vb">
+      <DependentUpon>ProductAllocationView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductList.aspx.designer.vb">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductList.aspx.vb">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductListHelp.aspx.designer.vb">
+      <DependentUpon>ProductListHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListHelp.aspx.vb">
+      <DependentUpon>ProductListHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductListView.aspx.designer.vb">
+      <DependentUpon>ProductListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListView.aspx.vb">
+      <DependentUpon>ProductListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsHelp.aspx.designer.vb">
+      <DependentUpon>ProductsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsHelp.aspx.vb">
+      <DependentUpon>ProductsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Receipts.aspx.designer.vb">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receipts.aspx.vb">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceiptsHelp.aspx.designer.vb">
+      <DependentUpon>ReceiptsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptsHelp.aspx.vb">
+      <DependentUpon>ReceiptsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingHelp.aspx.designer.vb">
+      <DependentUpon>ReceivingHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingHelp.aspx.vb">
+      <DependentUpon>ReceivingHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPFV.aspx.designer.vb">
+      <DependentUpon>ReceivingPFV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPFV.aspx.vb">
+      <DependentUpon>ReceivingPFV.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPoSettings.aspx.designer.vb">
+      <DependentUpon>ReceivingPoSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPoSettings.aspx.vb">
+      <DependentUpon>ReceivingPoSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingPoSettingsHelp.aspx.designer.vb">
+      <DependentUpon>ReceivingPoSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingPoSettingsHelp.aspx.vb">
+      <DependentUpon>ReceivingPoSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingTicket.aspx.designer.vb">
+      <DependentUpon>ReceivingTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingTicket.aspx.vb">
+      <DependentUpon>ReceivingTicket.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReceivingTicketPFV.aspx.designer.vb">
+      <DependentUpon>ReceivingTicketPFV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingTicketPFV.aspx.vb">
+      <DependentUpon>ReceivingTicketPFV.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="StagedOrdersHelp.aspx.designer.vb">
+      <DependentUpon>StagedOrdersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StagedOrdersHelp.aspx.vb">
+      <DependentUpon>StagedOrdersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StagedOrders.aspx.designer.vb">
+      <DependentUpon>StagedOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StagedOrders.aspx.vb">
+      <DependentUpon>StagedOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuppliersHelp.aspx.designer.vb">
+      <DependentUpon>SuppliersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuppliersHelp.aspx.vb">
+      <DependentUpon>SuppliersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankAlarmHistoryHelp.aspx.designer.vb">
+      <DependentUpon>TankAlarmHistoryHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankAlarmHistoryHelp.aspx.vb">
+      <DependentUpon>TankAlarmHistoryHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankAnalysis.aspx.designer.vb">
+      <DependentUpon>TankAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankAnalysis.aspx.vb">
+      <DependentUpon>TankAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankAnalysisHelp.aspx.designer.vb">
+      <DependentUpon>TankAnalysisHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankAnalysisHelp.aspx.vb">
+      <DependentUpon>TankAnalysisHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankGroupsHelp.aspx.designer.vb">
+      <DependentUpon>TankGroupsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankGroupsHelp.aspx.vb">
+      <DependentUpon>TankGroupsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankLevels.aspx.vb">
+      <DependentUpon>TankLevels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TankLevels.aspx.designer.vb">
+      <DependentUpon>TankLevels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllDrivers.aspx.designer.vb">
+      <DependentUpon>AllDrivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllDrivers.aspx.vb">
+      <DependentUpon>AllDrivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllDriversView.aspx.designer.vb">
+      <DependentUpon>AllDriversView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllDriversView.aspx.vb">
+      <DependentUpon>AllDriversView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllTransports.aspx.designer.vb">
+      <DependentUpon>AllTransports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransports.aspx.vb">
+      <DependentUpon>AllTransports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllTransportsView.aspx.designer.vb">
+      <DependentUpon>AllTransportsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransportsView.aspx.vb">
+      <DependentUpon>AllTransportsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applicators.aspx.designer.vb">
+      <DependentUpon>Applicators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applicators.aspx.vb">
+      <DependentUpon>Applicators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Branches.aspx.designer.vb">
+      <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Branches.aspx.vb">
+      <DependentUpon>Branches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Containers.aspx.vb">
+      <DependentUpon>Containers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CropTypes.aspx.designer.vb">
+      <DependentUpon>CropTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CropTypes.aspx.vb">
+      <DependentUpon>CropTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerActivityReport.aspx.designer.vb">
+      <DependentUpon>CustomerActivityReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerActivityReport.aspx.vb">
+      <DependentUpon>CustomerActivityReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerActivityReportView.aspx.designer.vb">
+      <DependentUpon>CustomerActivityReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerActivityReportView.aspx.vb">
+      <DependentUpon>CustomerActivityReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMasterFile.aspx.designer.vb">
+      <DependentUpon>CustomerMasterFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMasterFile.aspx.vb">
+      <DependentUpon>CustomerMasterFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMasterFileView.aspx.designer.vb">
+      <DependentUpon>CustomerMasterFileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMasterFileView.aspx.vb">
+      <DependentUpon>CustomerMasterFileView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Database.vb" />
+    <Compile Include="DriverReport.aspx.designer.vb">
+      <DependentUpon>DriverReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverReport.aspx.vb">
+      <DependentUpon>DriverReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PointOfSale.aspx.designer.vb">
+      <DependentUpon>PointOfSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSale.aspx.vb">
+      <DependentUpon>PointOfSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.vb" />
+    <Compile Include="TankAlarmHistory.aspx.vb">
+      <DependentUpon>TankAlarmHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TankAlarmHistory.aspx.designer.vb">
+      <DependentUpon>TankAlarmHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDestinations.aspx.designer.vb">
+      <DependentUpon>AccountDestinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDestinations.aspx.vb">
+      <DependentUpon>AccountDestinations.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DischargeLocations.aspx.vb">
+      <DependentUpon>DischargeLocations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facilities.aspx.designer.vb">
+      <DependentUpon>Facilities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facilities.aspx.vb">
+      <DependentUpon>Facilities.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankLevelsHelp.aspx.designer.vb">
+      <DependentUpon>TankLevelsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankLevelsHelp.aspx.vb">
+      <DependentUpon>TankLevelsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankLevelTrends.aspx.designer.vb">
+      <DependentUpon>TankLevelTrends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankLevelTrends.aspx.vb">
+      <DependentUpon>TankLevelTrends.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TankLevelTrendData.aspx.designer.vb">
+      <DependentUpon>TankLevelTrendData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankLevelTrendData.aspx.vb">
+      <DependentUpon>TankLevelTrendData.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TankGroups.aspx.designer.vb">
+      <DependentUpon>TankGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankGroups.aspx.vb">
+      <DependentUpon>TankGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TankLevelTrendsHelp.aspx.designer.vb">
+      <DependentUpon>TankLevelTrendsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TankLevelTrendsHelp.aspx.vb">
+      <DependentUpon>TankLevelTrendsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tanks.aspx.designer.vb">
+      <DependentUpon>Tanks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tanks.aspx.vb">
+      <DependentUpon>Tanks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanksHelp.aspx.designer.vb">
+      <DependentUpon>TanksHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanksHelp.aspx.vb">
+      <DependentUpon>TanksHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Template.aspx.vb">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ticket.aspx.designer.vb">
+      <DependentUpon>ticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ticket.aspx.vb">
+      <DependentUpon>ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketSettings.aspx.designer.vb">
+      <DependentUpon>TicketSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSettings.aspx.vb">
+      <DependentUpon>TicketSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketSettingsHelp.aspx.designer.vb">
+      <DependentUpon>TicketSettingsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSettingsHelp.aspx.vb">
+      <DependentUpon>TicketSettingsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tm2Page.vb" />
+    <Compile Include="TrackReport.aspx.designer.vb">
+      <DependentUpon>TrackReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackReport.aspx.vb">
+      <DependentUpon>TrackReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackReportHelp.aspx.designer.vb">
+      <DependentUpon>TrackReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackReportHelp.aspx.vb">
+      <DependentUpon>TrackReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TrackReportView.aspx.designer.vb">
+      <DependentUpon>TrackReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackReportView.aspx.vb">
+      <DependentUpon>TrackReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tracks.aspx.designer.vb">
+      <DependentUpon>Tracks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tracks.aspx.vb">
+      <DependentUpon>Tracks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TracksHelp.aspx.designer.vb">
+      <DependentUpon>TracksHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TracksHelp.aspx.vb">
+      <DependentUpon>TracksHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportHistory.aspx.designer.vb">
+      <DependentUpon>TransportHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportHistory.aspx.vb">
+      <DependentUpon>TransportHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportHistoryHelp.aspx.designer.vb">
+      <DependentUpon>TransportHistoryHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportHistoryHelp.aspx.vb">
+      <DependentUpon>TransportHistoryHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportReport.aspx.designer.vb">
+      <DependentUpon>TransportReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportReport.aspx.vb">
+      <DependentUpon>TransportReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportReportHelp.aspx.designer.vb">
+      <DependentUpon>TransportReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportReportHelp.aspx.vb">
+      <DependentUpon>TransportReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Transports.aspx.designer.vb">
+      <DependentUpon>Transports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transports.aspx.vb">
+      <DependentUpon>Transports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportsHelp.aspx.designer.vb">
+      <DependentUpon>TransportsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportsHelp.aspx.vb">
+      <DependentUpon>TransportsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportTrackingReport.aspx.designer.vb">
+      <DependentUpon>TransportTrackingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTrackingReport.aspx.vb">
+      <DependentUpon>TransportTrackingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportTrackingReportHelp.aspx.designer.vb">
+      <DependentUpon>TransportTrackingReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTrackingReportHelp.aspx.vb">
+      <DependentUpon>TransportTrackingReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportTrackingReportPFV.aspx.designer.vb">
+      <DependentUpon>TransportTrackingReportPFV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTrackingReportPFV.aspx.vb">
+      <DependentUpon>TransportTrackingReportPFV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportTypes.aspx.designer.vb">
+      <DependentUpon>TransportTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTypes.aspx.vb">
+      <DependentUpon>TransportTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportTypesHelp.aspx.designer.vb">
+      <DependentUpon>TransportTypesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTypesHelp.aspx.vb">
+      <DependentUpon>TransportTypesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportUsageReport.aspx.designer.vb">
+      <DependentUpon>TransportUsageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportUsageReport.aspx.vb">
+      <DependentUpon>TransportUsageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportUsageReportHelp.aspx.designer.vb">
+      <DependentUpon>TransportUsageReportHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportUsageReportHelp.aspx.vb">
+      <DependentUpon>TransportUsageReportHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransportUsageReportView.aspx.designer.vb">
+      <DependentUpon>TransportUsageReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportUsageReportView.aspx.vb">
+      <DependentUpon>TransportUsageReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Units.aspx.designer.vb">
+      <DependentUpon>Units.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Units.aspx.vb">
+      <DependentUpon>Units.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnitsHelp.aspx.designer.vb">
+      <DependentUpon>UnitsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnitsHelp.aspx.vb">
+      <DependentUpon>UnitsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BackNextButtons.ascx.designer.vb">
+      <DependentUpon>BackNextButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BackNextButtons.ascx.vb">
+      <DependentUpon>BackNextButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BulkPanelSettings.ascx.designer.vb">
+      <DependentUpon>BulkPanelSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BulkPanelSettings.ascx.vb">
+      <DependentUpon>BulkPanelSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Recipes.ascx.designer.vb">
+      <DependentUpon>Recipes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Recipes.ascx.vb">
+      <DependentUpon>Recipes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BulkProducts\BulkProductSetup.ascx.designer.vb">
+      <DependentUpon>BulkProductSetup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BulkProducts\BulkProductSetup.ascx.vb">
+      <DependentUpon>BulkProductSetup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductInterfaces.ascx.designer.vb">
+      <DependentUpon>ProductInterfaces.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductInterfaces.ascx.vb">
+      <DependentUpon>ProductInterfaces.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Product.ascx.designer.vb">
+      <DependentUpon>Product.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Product.ascx.vb">
+      <DependentUpon>Product.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelectOwners.ascx.designer.vb">
+      <DependentUpon>SelectOwners.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SelectOwners.ascx.vb">
+      <DependentUpon>SelectOwners.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelectProduct.ascx.designer.vb">
+      <DependentUpon>SelectProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SelectProduct.ascx.vb">
+      <DependentUpon>SelectProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfiles.aspx.designer.vb">
+      <DependentUpon>UserProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfiles.aspx.vb">
+      <DependentUpon>UserProfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfilesHelp.aspx.designer.vb">
+      <DependentUpon>UserProfilesHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilesHelp.aspx.vb">
+      <DependentUpon>UserProfilesHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersHelp.aspx.designer.vb">
+      <DependentUpon>UsersHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersHelp.aspx.vb">
+      <DependentUpon>UsersHelp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Utilities.vb" />
+    <Compile Include="OrderList.aspx.designer.vb">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.aspx.vb">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderListView.aspx.designer.vb">
+      <DependentUpon>OrderListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderListView.aspx.vb">
+      <DependentUpon>OrderListView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebService.asmx.vb">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServiceOpen.asmx.vb">
+      <DependentUpon>WebServiceOpen.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Welcome.aspx.vb">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.vb">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.vb">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryChangeReport.aspx.vb">
+      <DependentUpon>InventoryChangeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryChangeReport.aspx.designer.vb">
+      <DependentUpon>InventoryChangeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PastReceiving.aspx.vb">
+      <DependentUpon>PastReceiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PastReceiving.aspx.designer.vb">
+      <DependentUpon>PastReceiving.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receiving.aspx.vb">
+      <DependentUpon>Receiving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receiving.aspx.designer.vb">
+      <DependentUpon>Receiving.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.aspx.vb">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers.aspx.designer.vb">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TransportInspectionQuestions.aspx.resx">
+      <DependentUpon>TransportInspectionQuestions.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aspx.resx">
+      <DependentUpon>Login.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.aspx.resx">
+      <DependentUpon>Welcome.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="authentication.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Update Deplay.pubxml" />
+    <None Include="My Project\PublishProfiles\UpdateDeploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Styles\kaco-webfont.eot" />
+    <Content Include="Styles\kaco-webfont.ttf" />
+    <Content Include="Styles\kaco-webfont.woff" />
+    <Content Include="Styles\kaco-webfont.woff2" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="TM2 Install Readme.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="applications\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Styles\TimePicker\images\" />
+    <Folder Include="UserControls\Products\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaptureSignature\CaptureSignature.vbproj">
+      <Project>{53301d33-8649-4b2b-91c6-31ecaf2aea47}</Project>
+      <Name>CaptureSignature</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{e2f9bff6-1382-4492-a813-e11201f313de}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigCreator\ConfigCreator.vbproj">
+      <Project>{0bf8e8e5-73c4-4831-8a57-6127b1f57a1a}</Project>
+      <Name>ConfigCreator</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ScheduledTaskCreator\TM2ScheduledTaskCreator.vbproj">
+      <Project>{61a7f460-eb28-4323-9ff0-0bf4462189f6}</Project>
+      <Name>TM2ScheduledTaskCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tm2BackgroundServices\Tm2BackgroundServices.vbproj">
+      <Project>{14d23b41-ecd4-4fe3-9b20-45e0d76ba4ce}</Project>
+      <Name>Tm2BackgroundServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tm2Backup\Tm2Backup.vbproj">
+      <Project>{6bfe1747-9b64-4e4d-b63a-ba1cceb22fb7}</Project>
+      <Name>Tm2Backup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tm2EmailService\Tm2EmailService.vbproj">
+      <Project>{f18eb8b6-4872-4b2f-b04f-9b560523e357}</Project>
+      <Name>Tm2EmailService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tm2TankStatusReader\Tm2TankStatusReaderConfiguration\Tm2TankStatusReaderConfiguration.vbproj">
+      <Project>{74b4c8f0-68f1-4325-bc82-627d07c18dcd}</Project>
+      <Name>Tm2TankStatusReaderConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tm2TankStatusReader\Tm2TankStatusReader\Tm2TankStatusReader.vbproj">
+      <Project>{6b1fec2f-cc7f-43f8-982a-cbe324eb79cf}</Project>
+      <Name>Tm2TankStatusReader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Release" (
+  copy /y "\\Kaco1.Kahler.local\data\FDS\PC Code\TerminalManagement2\Updates\Release\WyUpdate\*.*" $(ProjectDir)
+)
+"\\Kaco1.Kahler.local\data\FDS\PC Code\Code Signing\Code Signing Utility\Current\KahlerCodeSigning.exe" "$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
