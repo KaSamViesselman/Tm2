@@ -8,7 +8,7 @@
     </button>
 </div>
 <div class="mb-2">
-    <asp:Repeater runat="server" ID="rpFacilities">
+    
         <ItemTemplate>
             <div class="card mt-3">
                 <div class="card-header">
